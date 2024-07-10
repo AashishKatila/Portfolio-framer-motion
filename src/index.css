@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-tab{
+  color: #86efac;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
