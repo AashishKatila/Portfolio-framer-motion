@@ -17,7 +17,7 @@ function Introduction() {
       initial={{ opacity: 0, x: "-400px" }}
       animate={{ opacity: 1, x: "0" }}
       transition={{ delay: 0.3, duration: 0.5 }}
-      className="col-span-2 "
+      className="flex flex-col justify-center   "
     >
       <div className="flex items-center  ">
         Hey there
@@ -33,15 +33,17 @@ function Introduction() {
         </motion.div>
         .
       </div>
-      I am a
-      <motion.div
-        className="text-green-500 inline-block  mx-2 text-3xl md:text-5xl md:mb-2 "
-        initial={{ opacity: 0, y: "200px" }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        Computer Engineer
-      </motion.div>
+      <div className="">
+        I am a
+        <motion.span
+          className="text-green-500 inline-block  mx-2 text-2xl md:text-5xl md:mb-2 "
+          initial={{ opacity: 0, y: "200px" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Computer Engineer
+        </motion.span>
+      </div>
       <div>& I love to build cool stuff. </div>
     </motion.div>
   );
@@ -66,7 +68,7 @@ const Landing = () => {
   return (
     <div className=" text-slate-100" id="home">
       <FloatingTab />
-      <div className="flex flex-col md:flex-row z-20 h-[60vh] md:h-[100vh] max-w-[1000px] justify-center items-center gap-12 mx-auto  text-xl md:text-3xl font-bold pt-36">
+      <div className="flex flex-col md:flex-row z-20 h-[90vh] md:h-[100vh] max-w-[1000px] justify-center items-center gap-12 mx-auto  text-xl md:text-3xl font-bold pt-36">
         <Introduction />
         <Image />
       </div>

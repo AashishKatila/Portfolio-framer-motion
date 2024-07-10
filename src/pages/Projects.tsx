@@ -22,7 +22,7 @@ const gridContainerVariants = {
 
 const Projects = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
 
   const projects = [
     {

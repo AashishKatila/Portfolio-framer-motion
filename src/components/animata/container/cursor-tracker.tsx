@@ -36,7 +36,7 @@ export default function CursorTracker({
       )}
     >
       {/* Actual content */}
-      <h1 className="mb-4 text-3xl font-semibold leading-none">
+      <h1 className="mb-4 text-2xl font-semibold leading-none">
         <span className="underline underline-offset-4 flex justify-center decoration-yellow-500">
           {title}
         </span>
@@ -49,7 +49,7 @@ export default function CursorTracker({
         style={{
           transform: "translate(var(--x), var(--y))",
         }}
-        className="0 pointer-events-none absolute left-0 top-0 z-50 rounded-full bg-green-400/80 px-4 py-2 text-sm font-bold text-white opacity-0 duration-0 group-hover:opacity-100"
+        className="0 pointer-events-none hidden md:absolute left-0 top-0 z-50 rounded-full bg-green-400/80 px-4 py-2 text-sm font-bold text-white opacity-0 duration-0 group-hover:opacity-100"
       >
         View &rarr;
       </div>
