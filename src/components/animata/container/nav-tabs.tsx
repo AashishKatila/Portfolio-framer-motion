@@ -1,19 +1,23 @@
+import { cn } from "../../../lib/utils";
+
 import { Link } from "react-scroll";
 
-import { cn } from "../../../lib/utils";
 import { IoHomeOutline, IoCallOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineProject } from "react-icons/ai";
 
 interface TabProps {
-  text: string;
+  text: "Home" | "About" | "Projects" | "Contact";
 }
 
 export default function NavTabs({ tabs }: { tabs: string[] }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-4  rounded-3xl bg-slate-900 px-4 py-2">
       {tabs.map((tab) => (
-        <Tab text={tab} key={tab} />
+        <Tab
+          text={tab as "Home" | "About" | "Projects" | "Contact"}
+          key={tab}
+        />
       ))}
     </div>
   );

@@ -9,6 +9,7 @@ interface FlipCardProps extends MotionProps {
   link: string;
   className?: string;
   rotate?: "x" | "y";
+  key: string;
 }
 
 const gridSquareVariants = {

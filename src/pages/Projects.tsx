@@ -92,6 +92,7 @@ const Projects = () => {
           <FlipCard
             description={project.description}
             image={project.image}
+            key={`key-${project.title}`}
             rotate="y"
             title={project.title}
             link={project.link}

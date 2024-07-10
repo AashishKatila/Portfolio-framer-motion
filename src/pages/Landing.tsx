@@ -62,19 +62,6 @@ function Image() {
   );
 }
 
-function Grid() {
-  return (
-    <div className="grid grid-cols-3 bg-white text-black border-8 border-pink-950   h-40 gap-4">
-      {/* <div className=" row-span-2 row-start-3 bg-red-600 ">01</div>
-      <div className=" row-span-4 row-end-5 bg-green-600">02</div>
-      <div className=" row-span-2 row-start-1 bg-blue-600 ">03</div> */}
-      <div className="bg-red-600 row-start-2 row-span-2 row-end-3 ">01</div>
-      <div className="bg-green-600">02</div>
-      <div className="bg-blue-600">03</div>
-    </div>
-  );
-}
-
 const Landing = () => {
   return (
     <div className=" text-slate-100" id="home">
@@ -83,7 +70,6 @@ const Landing = () => {
         <Introduction />
         <Image />
       </div>
-      <Grid />
     </div>
   );
 };
