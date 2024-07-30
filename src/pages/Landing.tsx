@@ -66,9 +66,9 @@ function Image() {
 
 const Landing = () => {
   return (
-    <div className=" text-slate-100" id="home">
+    <div className="text-slate-100" id="home">
       <FloatingTab />
-      <div className="flex flex-col md:flex-row z-20 h-[90vh] md:h-[100vh] max-w-[1000px] justify-center items-center gap-12 mx-auto  text-xl md:text-3xl font-bold pt-36">
+      <div className="flex flex-col md:flex-row z-20 h-[100vh] max-w-[1000px] justify-center items-center gap-14 md:gap-12 mx-auto text-xl md:text-3xl font-bold">
         <Introduction />
         <Image />
       </div>

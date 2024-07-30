@@ -4,8 +4,8 @@ import TypingText from "../components/animata/text/typing-text";
 function AboutMe() {
   return (
     <div className="h-[100vh]" id="about">
-      <div className=" flex  justify-center h-1/6 md:h-1/4 ">
-        <DoubleUnderline className="md:mt-24 my-9 text-slate-300 font-bold md:text-5xl text-2xl z-30 ">
+      <div className=" flex  justify-center items-center h-1/6  md:h-1/4 ">
+        <DoubleUnderline className="h-8 md:h-12  text-slate-300 font-bold md:text-5xl text-2xl z-30 ">
           About Me
         </DoubleUnderline>
       </div>

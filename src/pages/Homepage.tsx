@@ -6,7 +6,7 @@ import Projects from "./Projects";
 
 function Homepage() {
   return (
-    <div className="relative overflow-hidden font-poppins">
+    <div className="relative bg-black overflow-hidden font-poppins">
       <BubblesFloat />
       <div className="bg-slate-950">
         <Landing />

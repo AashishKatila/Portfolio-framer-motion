@@ -1,14 +1,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+
 import BoldCopy from "../components/animata/text/bold-copy";
 import FlipCard from "../components/animata/cards/flip-card";
-
-import Ecommerce from "../assets/ecom.jpg";
-import Portfolio from "../assets/portfolio.png";
-import Edu from "../assets/education.jpg";
-import Music from "../assets/music-player.jpg";
+import Pokemon from "../assets/pokemon.png";
+import Ecommerce from "../assets/ecommerce.png";
+import Typing from "../assets/typingtest.png";
+import Movie from "../assets/movieList.png";
 import Weather from "../assets/weather.jpg";
-import Animata from "../assets/animata.png";
+import Note from "../assets/note.png";
 
 const gridContainerVariants = {
   hidden: { opacity: 0 },
@@ -26,44 +26,36 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Animata",
-      name: "Animata",
+      title: "Note App",
+      name: "Note App",
       description:
         "Hand-crafted ✍️ interaction animation on the internet, providing visually appealing and interactive user experiences.",
-      image: Animata,
-      link: "https://github.com/AashishKatila",
+      image: Note,
+      link: "https://react-note-save.netlify.app/",
     },
     {
-      title: "E-Commerce",
-      name: "E-Commerce",
+      title: "Pokemon List",
+      name: "Pokemon List",
       description:
         "Shop whatever you need from this comprehensive e-commerce website, featuring a wide range of products and seamless user interface.",
-      image: Ecommerce,
-      link: "https://github.com/AashishKatila",
+      image: Pokemon,
+      link: "https://pokemon-evolution-list.netlify.app/",
     },
     {
-      title: "Music Player",
-      name: "Music Player",
+      title: "Movie List",
+      name: "Movie List",
       description:
         "Tired of listening to the same music all the time? This music player will help you discover new music.",
-      image: Music,
-      link: "https://github.com/AashishKatila",
+      image: Movie,
+      link: "https://movie-list-pi-five.vercel.app/",
     },
     {
-      title: "Educational App",
-      name: "Educational App",
+      title: "Typing Speed Test",
+      name: "Typing Speed Test",
       description:
         "Learn anything you want from this educational app, offering a variety of courses and interactive learning materials.",
-      image: Edu,
-      link: "https://github.com/AashishKatila",
-    },
-    {
-      title: "Portfolio ",
-      name: "Portfolio ",
-      description:
-        "Showcase your skills and projects with this modern and responsive portfolio website.",
-      image: Portfolio,
-      link: "https://www.aashishkatila.com.np",
+      image: Typing,
+      link: "https://frabjous-kataifi-8aa65e.netlify.app/",
     },
     {
       title: "Weather App",
@@ -71,7 +63,15 @@ const Projects = () => {
       description:
         "Get real-time weather updates and forecasts with this user-friendly weather application.",
       image: Weather,
-      link: "https://github.com/AashishKatila",
+      link: "https://profound-pegasus-044f51.netlify.app/",
+    },
+    {
+      title: "E-commerce",
+      name: "E-commerce",
+      description:
+        "Showcase your skills and projects with this modern and responsive portfolio website.",
+      image: Ecommerce,
+      link: "https://bespoke-hotteok-7914f8.netlify.app/",
     },
   ];
 
