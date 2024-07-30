@@ -29,15 +29,14 @@ const Projects = () => {
       title: "Note App",
       name: "Note App",
       description:
-        "Hand-crafted ✍️ interaction animation on the internet, providing visually appealing and interactive user experiences.",
+        "Note with add,search and delete functionality. Toggle mode also available",
       image: Note,
       link: "https://react-note-save.netlify.app/",
     },
     {
       title: "Pokemon List",
       name: "Pokemon List",
-      description:
-        "Shop whatever you need from this comprehensive e-commerce website, featuring a wide range of products and seamless user interface.",
+      description: "Lists pokemon from an API.",
       image: Pokemon,
       link: "https://pokemon-evolution-list.netlify.app/",
     },
@@ -45,15 +44,14 @@ const Projects = () => {
       title: "Movie List",
       name: "Movie List",
       description:
-        "Tired of listening to the same music all the time? This music player will help you discover new music.",
+        "Add your favourite movies to holdlist and watched list. Uses context.",
       image: Movie,
       link: "https://movie-list-pi-five.vercel.app/",
     },
     {
       title: "Typing Speed Test",
       name: "Typing Speed Test",
-      description:
-        "Learn anything you want from this educational app, offering a variety of courses and interactive learning materials.",
+      description: "Increase your typing speed with this app.",
       image: Typing,
       link: "https://frabjous-kataifi-8aa65e.netlify.app/",
     },
@@ -69,7 +67,7 @@ const Projects = () => {
       title: "E-commerce",
       name: "E-commerce",
       description:
-        "Showcase your skills and projects with this modern and responsive portfolio website.",
+        "Very basic e-commerce application. Add to cart, increase/decrease item quantity and order item.",
       image: Ecommerce,
       link: "https://bespoke-hotteok-7914f8.netlify.app/",
     },
