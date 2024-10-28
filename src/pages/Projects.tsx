@@ -2,13 +2,13 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import BoldCopy from "../components/animata/text/bold-copy";
-import FlipCard from "../components/animata/cards/flip-card";
 import Pokemon from "../assets/pokemon.png";
 import Ecommerce from "../assets/ecommerce.png";
 import Typing from "../assets/typingtest.png";
 import Movie from "../assets/movieList.png";
 import Weather from "../assets/weather.jpg";
 import Note from "../assets/note.png";
+import Card from "../components/animata/cards/Card";
 
 const gridContainerVariants = {
   hidden: { opacity: 0 },
@@ -26,50 +26,53 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Note App",
-      name: "Note App",
+      id: 1,
+      title: "Animata",
+      name: "Animata",
       description:
-        "Note with add,search and delete functionality. Toggle mode also available",
+        "Free & open-source collection of animations, effects, & interactions",
       image: Note,
-      link: "https://react-note-save.netlify.app/",
+      link: "https://animata.design/",
     },
     {
-      title: "Pokemon List",
-      name: "Pokemon List",
-      description: "Lists pokemon from an API.",
+      id: 2,
+      title: "Sisu",
+      name: "Sisu",
+      description: "An educational companion for young learners",
       image: Pokemon,
-      link: "https://pokemon-evolution-list.netlify.app/",
+      link: "https://play.google.com/store/apps/details?id=com.codse.sisu&hl=en",
     },
     {
+      id: 3,
+      title: "Kanti Girls Hostel",
+      name: "Kanti Girls Hostel",
+      description: "Kanti Girls Hostel - best girls hostel in Pokhara",
+      image: Typing,
+      link: "https://kanti-girls-hostel.vercel.app/",
+    },
+    {
+      id: 4,
       title: "Movie List",
       name: "Movie List",
-      description:
-        "Add your favourite movies to holdlist and watched list. Uses context.",
+      description: "Add your favourite movies to holdlist & watched list.",
       image: Movie,
       link: "https://movie-list-pi-five.vercel.app/",
     },
     {
-      title: "Typing Speed Test",
-      name: "Typing Speed Test",
-      description: "Increase your typing speed with this app.",
-      image: Typing,
-      link: "https://frabjous-kataifi-8aa65e.netlify.app/",
-    },
-    {
-      title: "Weather App",
-      name: "Weather App",
-      description:
-        "Get real-time weather updates and forecasts with this user-friendly weather application.",
-      image: Weather,
-      link: "https://profound-pegasus-044f51.netlify.app/",
-    },
-    {
+      id: 5,
       title: "E-commerce",
       name: "E-commerce",
-      description:
-        "Very basic e-commerce application. Add to cart, increase/decrease item quantity and order item.",
+      description: "Simple e-commerce application",
       image: Ecommerce,
-      link: "https://bespoke-hotteok-7914f8.netlify.app/",
+      link: "https://ecommerce-geektech.netlify.app/",
+    },
+    {
+      id: 6,
+      title: "Note App",
+      name: "Note App",
+      description: "Note with add, search and delete functionality.",
+      image: Note,
+      link: "https://react-note-save.netlify.app/",
     },
   ];
 
@@ -80,20 +83,18 @@ const Projects = () => {
     >
       <BoldCopy text="Projects" className="z-20 md:mb-10" />
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 md:max-w-[1000px]"
+        className="grid z-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4 md:max-w-[1000px]"
         variants={gridContainerVariants}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
         ref={ref}
       >
         {projects.map((project) => (
-          <FlipCard
-            description={project.description}
-            image={project.image}
-            key={`key-${project.title}`}
-            rotate="y"
+          <Card
+            id={project.id}
             title={project.title}
-            link={project.link}
+            image={project.image}
+            description={project.description}
           />
         ))}
       </motion.div>
