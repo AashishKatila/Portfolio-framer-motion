@@ -1,76 +1,71 @@
-import { motion } from "framer-motion";
-import { ContainerScroll } from "../components/animata/container/scroll-animation";
+import { IoIosMail } from "react-icons/io";
 
 function Input({ type, placeholder }: { type: string; placeholder: string }) {
   return (
     <input
       type={type}
       placeholder={placeholder}
-      className="p-3 border-2 w-full border-gray-600 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="p-3 border-2 w-full border-gray-600 rounded-md bg-gray-200 text-gray-400 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
   );
 }
 
 function PersonalInfo() {
   return (
-    <div className="flex flex-col space-y-4 text-lg text-gray-300">
-      <div className="font-bold text-3xl text-white">Aashish Katila</div>
-      <div>aashishkatila@gmail.com</div>
-      <div>+977-9816124226</div>
+    <div className="w-full flex flex-col lg:gap-10 gap-4 text-white lg:px-32 px-16 justify-center">
+      <div className="flex flex-col lg:gap-4 gap-2">
+        <h2 className="lg:text-5xl text-3xl font-semibold text-gray-100">
+          Let's Chat.
+        </h2>
+        <h2 className="lg:text-5xl text-3xl font-semibold text-gray-100">
+          Tell me about your
+          <br /> project.
+        </h2>
+      </div>
+      <div className="flex flex-col gap-2">
+        <p className="text-gray-400 text-lg">
+          Let's create something together <span className="text-2xl">👋</span>
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 items-center">
+          <p className="w-10 h-10 flex justify-center items-center bg-gray-500 rounded-full">
+            <IoIosMail size={32} />
+          </p>
+          <div className="flex flex-col">
+            <p>Mail me at :</p>
+            <p className="text-green-400 font-semibold">
+              work.aashish0katila@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 function FormComponent() {
   return (
-    <form className="flex flex-col space-y-4">
-      <Input type="text" placeholder="Name" />
-      <Input type="email" placeholder="Email" />
-      <Input type="tel" placeholder="Phone" />
-      <button
-        type="submit"
-        className="p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        Submit
-      </button>
-    </form>
+    <div className="w-full z-20 flex flex-col gap-4 lg:px-32 px-16 justify-center">
+      <h2 className="text-white text-3xl font-semibold">Send me a message🚀</h2>
+      <Input type="text" placeholder="First Name" />
+      <Input type="email" placeholder="Email Address" />
+      <Input type="text" placeholder="Subject" />
+      <p className="text-white text-xl">Tell me more about your project</p>
+      <textarea className="rounded-xl" />
+      <div className="text-white text-lg font-semibold bg-green-600 rounded-2xl px-8 py-1 max-w-fit cursor-pointer">
+        Send Message
+      </div>
+    </div>
   );
 }
 
 const Contact = () => {
   return (
-    <div id="contact">
-      <ContainerScroll
-        titleComponent={
-          <div className="md:text-3xl lg:text-5xl text-lg text-green-400 font-bold md:pb-2 ">
-            Meet the Person behind this webpage
-          </div>
-        }
-      >
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 text-white text-lg md:text-xl place-content-center h-full place-items-center bg-gradient-to-r from-gray-800 via-gray-900 to-black p-8 gap-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <motion.div
-            className="md:flex hidden flex-col justify-center items-center border-2 border-gray-700 p-8 rounded-lg shadow-lg bg-gray-800 bg-opacity-75 w-full md:w-auto"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <PersonalInfo />
-          </motion.div>
-          <motion.div
-            className="bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg"
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <FormComponent />
-          </motion.div>
-        </motion.div>
-      </ContainerScroll>
+    <div
+      id="contact"
+      className="h-[100vh] w-full grid lg:grid-cols-2 grid-cols-1"
+    >
+      <PersonalInfo />
+      <FormComponent />
     </div>
   );
 };
