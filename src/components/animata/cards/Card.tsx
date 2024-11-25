@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Modal from "../modal/Modal";
+import { AnimatePresence } from "framer-motion";
 
 interface ICardProps {
   id: number;
@@ -46,15 +47,17 @@ const Card = ({
         </div>
         <p className="text-gray-300">{small_desc}</p>
       </div>
-      {isOpen && (
-        <Modal
-          title={title}
-          description={description}
-          image={image}
-          link={link}
-          onClose={() => setIsOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <Modal
+            title={title}
+            description={description}
+            image={image}
+            link={link}
+            onClose={() => setIsOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };
