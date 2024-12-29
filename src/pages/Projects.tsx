@@ -95,7 +95,7 @@ const Projects = () => {
     >
       <BoldCopy text="Projects" className="z-20 md:mb-10" />
       <motion.div
-        className="grid z-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4 md:max-w-[1000px]"
+        className="grid z-20 grid-cols-1 px-4 md:px-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4 md:max-w-[1000px]"
         variants={gridContainerVariants}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}

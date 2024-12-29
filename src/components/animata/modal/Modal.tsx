@@ -11,7 +11,7 @@ interface IModalProps {
 
 const Modal = ({ title, image, description, link, onClose }: IModalProps) => {
   return (
-    <div className="fixed z-50 inset-0 flex justify-center items-center bg-black bg-opacity-50">
+    <div className="fixed z-50 inset-0 flex justify-center px-4  items-center bg-black bg-opacity-50">
       <motion.div
         className="flex flex-col gap-2 bg-gray-800 p-4 rounded-3xl shadow-lg max-w-lg w-full"
         initial={{ opacity: 0 }}
